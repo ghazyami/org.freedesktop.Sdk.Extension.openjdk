@@ -24,9 +24,9 @@ modules:
       - type: file
         only-arches:
           - x86_64
-        url: https://github.com/adoptium/temurin22-binaries/releases/download/jdk-22%2B36/OpenJDK22U-jdk_x64_linux_hotspot_22_36.tar.gz
+        url: https://github.com/adoptium/temurin22-binaries/releases/download/jdk-22.0.1%2B8/OpenJDK22U-jdk_x64_linux_hotspot_22.0.1_8.tar.gz
         dest-filename: java-openjdk.tar.bz2
-        sha512: 5e947106fabe31c3e229aa380cbebe46ca46c544ae3d0c520ed257a217db87938994223b0adab7630d9713fea996f55fb0437368bf6b335b30646870a91adae5
+        sha512: 2f9cb8e6ab5c9097ad0d9dc482d913aa3de5d4b9f0868bfc909b3e799a4b4d07b045fb46cd94067ed608a0a925edb30e5d81a9cf2bf9cad6a6bb1564c4ee9c11
         x-checker-data:
           type: json
           url: https://api.adoptium.net/v3/assets/latest/22/hotspot?os=linux&architecture=x64&image_type=jdk
@@ -35,9 +35,9 @@ modules:
       - type: file
         only-arches:
           - aarch64
-        url: https://github.com/adoptium/temurin22-binaries/releases/download/jdk-22%2B36/OpenJDK22U-jdk_aarch64_linux_hotspot_22_36.tar.gz
+        url: https://github.com/adoptium/temurin22-binaries/releases/download/jdk-22.0.1%2B8/OpenJDK22U-jdk_aarch64_linux_hotspot_22.0.1_8.tar.gz
         dest-filename: java-openjdk.tar.bz2
-        sha512: 94335b4137b82f8d977c235f1fa91c035b279f5ab9b3cb4e0230f4bc1e1b9346c5b9b5e588b7a28a43b2db4555e09476531548dd9e849ede553ac172f3a19b08
+        sha512: efbeb6dedcd13450c31ee0899cc8e6a9ece372b3bb781442129595cf5d8353816287f8712b84f5294aaf0bef2fc0453568ed2953c739e4e50b7a4460aa3cf33f
         x-checker-data:
           type: json
           url: https://api.adoptium.net/v3/assets/latest/22/hotspot?os=linux&architecture=aarch64&image_type=jdk
@@ -83,8 +83,8 @@ modules:
       - (cd $FLATPAK_DEST/jvm && ln -s openjdk-22.* openjdk-22)
     sources:
       - type: archive
-        url: https://github.com/openjdk/jdk22u/archive/refs/tags/jdk-22+36.tar.gz
-        sha512: c57919a9077804bd012242cf2222eb5608118e3759037910984c90d9ce23a5e1e5df53270a10b8d187209822bf8b68287b94954d62d35c6fb84a0237a3ec9e20
+        url: https://github.com/openjdk/jdk22u/archive/refs/tags/jdk-22.0.1+8.tar.gz
+        sha512: 5d64317595923d62ed61d22dbc245439e82c4cf0c4bb855b58e1f9484377f5349d69f44e7fb39f4f01924b4c9cb1d8fa1159f29ccebb1d4b20be27981f2b51da
         x-checker-data:
           type: json
           url: https://api.adoptium.net/v3/assets/latest/22/hotspot?os=linux&architecture=x64&image_type=jdk
