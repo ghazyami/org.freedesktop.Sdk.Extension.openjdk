@@ -48,6 +48,7 @@ modules:
       - tar xf java-openjdk.tar.bz2 --strip-components=1 --directory=$FLATPAK_DEST/bootstrap-java
   - name: java
     buildsystem: autotools
+    no-make-install: true
     no-parallel-make: true
     config-opts:
       - --with-boot-jdk=/usr/lib/sdk/openjdk/bootstrap-java
