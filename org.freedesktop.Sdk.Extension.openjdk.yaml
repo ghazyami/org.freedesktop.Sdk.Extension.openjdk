@@ -81,7 +81,9 @@ modules:
       - LOG=info
       - images
     post-install:
-      - (cd $FLATPAK_DEST/jvm && ln -s openjdk-22.* openjdk-22)
+      - mkdir -p $FLATPAK_DEST/jvm/ $FLATPAK_DEST/bin
+      - cp -Lr build/linux-x86_64-server-release/jdk $FLATPAK_DEST/jvm/openjdk-22
+      - ln -s $FLATPAK_DEST/jvm/openjdk-22/bin/* $FLATPAK_DEST/bin
     sources:
       - type: archive
         url: https://github.com/openjdk/jdk22u/archive/refs/tags/jdk-22.0.1+8.tar.gz
