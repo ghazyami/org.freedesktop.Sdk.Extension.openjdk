@@ -82,7 +82,7 @@ modules:
       - images
     post-install:
       - mkdir -p $FLATPAK_DEST/jvm/ $FLATPAK_DEST/bin
-      - cp -Lr build/linux-x86_64-server-release/images/jdk $FLATPAK_DEST/jvm/openjdk-22
+      - cp -Lr build/linux-*-server-release/images/jdk $FLATPAK_DEST/jvm/openjdk-22
       - ln -s $FLATPAK_DEST/jvm/openjdk-22/bin/* $FLATPAK_DEST/bin
     sources:
       - type: archive
