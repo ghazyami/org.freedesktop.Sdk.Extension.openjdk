@@ -24,9 +24,9 @@ modules:
       - type: file
         only-arches:
           - x86_64
-        url: https://github.com/adoptium/temurin22-binaries/releases/download/jdk-22.0.1%2B8/OpenJDK22U-jdk_x64_linux_hotspot_22.0.1_8.tar.gz
+        url: https://github.com/adoptium/temurin22-binaries/releases/download/jdk-22.0.2%2B9/OpenJDK22U-jdk_x64_linux_hotspot_22.0.2_9.tar.gz
         dest-filename: java-openjdk.tar.bz2
-        sha512: 2f9cb8e6ab5c9097ad0d9dc482d913aa3de5d4b9f0868bfc909b3e799a4b4d07b045fb46cd94067ed608a0a925edb30e5d81a9cf2bf9cad6a6bb1564c4ee9c11
+        sha512: 63279c060903dfdc548b4e8c13822f39bf1fe1951f26f9345e8501eda9a992f9120706a09dc02a8ce48640c118239b8d0aa577a166d5a1422a8e1e6f14f32d74
         x-checker-data:
           type: json
           url: https://api.adoptium.net/v3/assets/latest/22/hotspot?os=linux&architecture=x64&image_type=jdk
@@ -86,8 +86,8 @@ modules:
       - ln -s $FLATPAK_DEST/jvm/openjdk-22/bin/* $FLATPAK_DEST/bin
     sources:
       - type: archive
-        url: https://github.com/openjdk/jdk22u/archive/refs/tags/jdk-22.0.1+8.tar.gz
-        sha512: 5d64317595923d62ed61d22dbc245439e82c4cf0c4bb855b58e1f9484377f5349d69f44e7fb39f4f01924b4c9cb1d8fa1159f29ccebb1d4b20be27981f2b51da
+        url: https://github.com/openjdk/jdk22u/archive/refs/tags/jdk-22.0.2+9.tar.gz
+        sha512: 99df868ea802088d3a7aaf4fabfa6e8d70873beafad52040a2a741e132fdb5c9f805185a45ec923807b02fa1819613a0f68b8533cec5dd292e62d340750ede46
         x-checker-data:
           type: json
           url: https://api.adoptium.net/v3/assets/latest/22/hotspot?os=linux&architecture=x64&image_type=jdk
@@ -151,9 +151,9 @@ modules:
       - '*.bat'
     sources:
       - type: file
-        url: https://services.gradle.org/distributions/gradle-8.8-bin.zip
+        url: https://services.gradle.org/distributions/gradle-8.9-bin.zip
         dest-filename: gradle-bin.zip
-        sha512: 8a213e1bdfd65e8c3f191b4d25e04c71d6a2ce9ae75c8d77db72b2248d16104d71db95d4d4caa41d27d45d0207d4db25b6fde38c9cb5e24b28142e9c41c24b74
+        sha512: 2b518f56b472ca505de7c4c315711bc7837a15cb343edd3e6479777a7d2a93e1a807f339c3b2f121c9be9e5d19bc39e793b322b2f536ed52c67587598eeb653e
         x-checker-data:
           type: json
           url: https://api.github.com/repos/gradle/gradle/releases
